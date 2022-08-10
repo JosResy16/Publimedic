@@ -97,12 +97,12 @@ header .menu-movil{
 /*FIN MENU MOVIL*/
 
 .banner{
-	width: 100%;
+	width: 60%;
 	/* height: 48em; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-left: 1.25em;
+	/* padding-left: 1.25em; */
 	z-index: 3;
 	position: relative; top: -35em; right: -10em;
 }
