@@ -96,9 +96,9 @@ header .menu-movil{
 
 /*FIN MENU MOVIL*/
 
-.banner{
+.text-banner{
 	width: 60%;
-	/* height: 48em; */
+	height: 25em;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -112,21 +112,26 @@ header .menu-movil{
 	height: 700px;
 }
 
-.banner h1{
+.carousel-indicators{
+	z-index: 2;
+}
+
+.text-banner h1{
 	margin-bottom: .2em;
 	margin-left: .5em;
 	font-size: 5em;
 }
 
-.banner p{
+.servicios .text-banner p{
 	margin-bottom: .8em;
-	font-size: 1.3em;
+	font-size: 1.5em;
+	text-align: left;
 	font-weight: bold;
 	color: #435892;
 	margin-left: 2.2em;
 }
 
-.banner a{
+.text-banner a{
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 1.2em;
@@ -157,7 +162,8 @@ header .menu-movil{
 	margin: auto;
 	display: flex;
 	flex-direction: row;
-	position: relative; top: -15em;
+	position: relative; top: -28em;
+	z-index: 3;
 }
 
 .cont-caract .caract{
@@ -187,10 +193,13 @@ header .menu-movil{
 	background-image: url(../img/banner2.jpg);
 	background-size: cover;
 	background-position: center;
+	height: 55em;
 }
 
 .serv-2{
-	position: relative; top: 0em;
+	display: flex;
+	flex-direction: column;
+	position: relative; top: -23em;
 }
 
 .servicios  p{
@@ -212,7 +221,7 @@ header .menu-movil{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-items: center;
+	/* align-items: center; */
 }
 
 .serv{
@@ -756,29 +765,39 @@ footer p{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-end;
-	padding-left: 20px;
+	align-items: center;
 	background-image: url(../img/1.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	text-align: right;
 	background-color: #70c0fb;
+	z-index: 1;
+}
+
+.oscuro-servicios{
+	width: 100%;
+	height: 500px;
+	position: absolute;
+	background: rgba(0, 0, 0, .3);
+	z-index: 2;
 }
 
 .text-banner-serv{
 	text-align: left;
+	margin-left: 20em;
+	z-index: 3;
 }
 
 .banner-servicios h1{
 	margin-bottom: 25px;
 	padding-right: 50px;
 	color: #ffffff;
-
+	font-size: 5em;
 }
 
 .banner-servicios p{
 	margin-bottom: 20px;
-	font-size: 1.1em;
+	font-size: 1.4em;
 	font-weight: bold;
 	color: #ffffff;
 	padding-right: 50px;
@@ -787,27 +806,44 @@ footer p{
 .banner-servicios a{
 	text-decoration: none;
 	color: #ffffff;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	font-weight: bold;
-
+	z-index: 3;
 }
 
 .btn-contacto-serv{
 	background-color: #4c637f;
-	width: 120px;
+	width: 140px;
+	height: 36px;
 	text-align: center;
 	border-radius: 2px;
-	position: relative; right: 580px; top: 40px;
+	position: relative; right: 13em;
+	z-index: 3;
+	transition: ease all .5s;
+}
+
+.btn-contacto-serv:hover{
+	background-color: white ;
+}
+
+.banner-servicios a:hover{
+	color:  #bdaa8a ;
 }
 
 .nuestros-servicios{
-	width: 100%;
+	width: 90%;
 	height: auto;
+	margin: auto;
+}
+
+.container-pts-serv{
+	display: flex;
+	margin-bottom: 8em;
 }
 
 .nuestros-servicios h2{
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 3.5em;
 	margin-top: 1em;
 }
 
@@ -859,8 +895,9 @@ footer p{
 }
 
 .text-serv h3{
-	text-align: center;
-	margin-bottom: 1em;
+	margin-top: 1em;
+	margin-bottom: 1.3em;
+	border-bottom: 1px solid gray;
 }
 
 /*Agregar estilos de hover a los elementos, cambiar colores de background
@@ -872,7 +909,7 @@ y colores en general, agregar más contenido*/
 
 .banner-contacto{
 	width: 100%;
-	height: 500px;
+	height: 700px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -891,14 +928,19 @@ y colores en general, agregar más contenido*/
 	margin-left: 2em;
 }
 
+.banner-contacto .text-banner-cont{
+	margin-left: 5em;
+}
+
 .banner-contacto h1{
 	margin-bottom: 25px;
 	padding-right: 50px;
+	font-size: 6em;
 }
 
 .banner-contacto p{
 	margin-bottom: 20px;
-	font-size: 1.1em;
+	font-size: 1.4em;
 	font-weight: bold;
 	color: #3e4e59;
 	padding-right: 50px;
@@ -943,7 +985,7 @@ y colores en general, agregar más contenido*/
 
 .aside-cont{
 	width: 25%;
-	background-color: coral;
+	/* background-color: coral; */
 	text-align: center;
 }
 
@@ -951,6 +993,7 @@ y colores en general, agregar más contenido*/
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	margin-left: 5em;
 	width: 100%;
 	height: 70%;
 	justify-content: space-around;
@@ -960,7 +1003,7 @@ y colores en general, agregar más contenido*/
 	display: flex;
 	margin-left: 2em;
 	font-size: 1.2em;
-	color: white;
+	color: #393f50;;
 }
 
 .point-aside i{
@@ -969,7 +1012,7 @@ y colores en general, agregar más contenido*/
 
 .article-cont{
 	width: 75%;
-	background-color: red;
+	/* background-color: red; */
 }
 
 .article-cont h2{
@@ -983,6 +1026,29 @@ y colores en general, agregar más contenido*/
 	margin-top: 1em;
 }
 
+.formulario_contacto .input-group input[type="text"], input[type="email"], textarea{
+	color:#393f50;
+	border-bottom: 1px solid #393f50;
+}
+
+.formulario_contacto .input-group input[type="text"]:focus, input[type="email"]:focus, textarea:focus{
+	color: #393f50;
+	border-bottom: 3px solid #393f50;
+}
+
+.label{
+	color: #393f50;
+}
+
+input[type="submit"]{
+	background-color: black;
+	color: #ffffff;
+}
+
+input[type="submit"]:hover{
+	background-color: #393f50;
+}
+
 /*Cambiar colores de background, agregar más contenido*/
 
 
@@ -991,7 +1057,7 @@ y colores en general, agregar más contenido*/
 /*ESTILOS DE PAGE NOSOTRO*/
 
 .banner-nosotros{
-	width: 100%;
+	width: 70%;
 	/* height: 40em; */
 	display: flex;
 	flex-direction: column;
@@ -1012,7 +1078,7 @@ y colores en general, agregar más contenido*/
 }
 
 .text-banner-nos{
-	width: 50%;
+	width: 100%;
 	text-align:left;
 	margin-left: 2em;
 	z-index: 3;
@@ -1027,9 +1093,10 @@ y colores en general, agregar más contenido*/
 
 .banner-nosotros p{
 	margin-bottom: 20px;
+	width: 50%;
 	font-size: 1.5em;
 	font-weight: bold;
-	color: #bdaa8a;
+	color:  #4c637f;
 	padding-right: 50px;
 	text-align: justify;
 }
@@ -1149,10 +1216,14 @@ y colores en general, agregar más contenido*/
 
 .p-fin{
 	width: 100%;
+	height: 2em;
 	background-color: black;
 	font-size: 1.2em;
 	color: white;
+}
+.p-fin p{
 	text-align: center;
+	padding-top: .3em;
 }
 
 @media all and (max-width: 1630px){
