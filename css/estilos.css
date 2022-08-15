@@ -841,7 +841,7 @@ footer p{
 	height: 36px;
 	text-align: center;
 	border-radius: 2px;
-	position: relative; right: 13em;
+	/* position: relative; right: 13em; */
 	z-index: 3;
 	transition: ease all .5s;
 }
@@ -924,6 +924,100 @@ footer p{
 	border-bottom: 1px solid gray;
 }
 
+@media all and (max-width: 1555px){
+	.oscuro-servicios{
+		background: rgba(0, 0, 0, .8);
+	}
+
+	.text-banner-serv{
+		margin-left: 0;
+		position: relative; right: 10em;
+	}
+}
+
+@media all and (max-width: 1282px){
+	.text-banner-serv{
+		position: relative; right: 4em;
+	}
+}
+
+@media all and (max-width: 1053px){
+	.text-banner-serv{
+		position: relative; right: 0;
+	}
+}
+
+@media all and (max-width: 975px){
+	.container-pts-serv{
+		flex-direction: column;
+		margin-bottom: 0;
+	}
+
+	.container-servicios-serv .pt-serv{
+		width: 100%;
+	}
+
+	.btn-contacto-serv{
+		font-size: 1.2em;
+		position: relative; right: 5em;
+	}
+}
+
+@media all and (max-width: 941px){
+
+	.text-banner-serv{
+		margin-left: 2em;
+	}
+
+	.text-banner-serv h1{
+		font-size: 4em;
+	}
+
+	.text-banner-serv p{
+		font-size: 1.2em;
+	}
+
+	.btn-contacto-serv a{
+		font-size: 1.2em;
+	}
+
+	.btn-contacto-serv{
+		width: 140px;
+		height: 36px;
+		margin-left: 5em;
+	}
+}
+
+@media all and (max-width: 735px){
+	.text-banner-serv p{
+		width: 70%;
+		font-size: 1em;
+	}
+	.text-banner-serv h1{
+		font-size: 3.5em;
+	}
+}
+
+@media all and (max-width: 500px){
+	.pt-serv{
+		flex-direction: column;
+		padding-right: 2em;
+		margin-top: 1.5em;
+	}
+
+	.img-serv{
+		width: 100%;
+		background-size: cover;
+	}
+	.text-serv{
+		width: 100%;
+		height: auto;
+	}
+
+	.text-banner-serv p{
+		display: none;
+	}
+}
 /*Agregar estilos de hover a los elementos, cambiar colores de background
 y colores en general, agregar más contenido*/
 
