@@ -110,10 +110,25 @@ header .menu-movil{
 .carousel-item img{
 	width: 100%;
 	height: 700px;
+	display: flex;
+}
+
+.carousel-control-prev{
+	display: flex;
+}
+.carousel-control-next{
+	display: flex;
 }
 
 .carousel-indicators{
 	z-index: 2;
+}
+
+.banner-movil{
+	width: 100%;
+	height: 700px;
+	display: none;
+	background-color: #393f50;
 }
 
 .text-banner h1{
@@ -131,6 +146,16 @@ header .menu-movil{
 	margin-left: 2.2em;
 }
 
+.servicios .text-banner .text-movil-banner{
+	margin-bottom: .8em;
+	font-size: 1.5em;
+	text-align: left;
+	font-weight: bold;
+	color: #435892;
+	margin-left: 1.6em;
+	display: none;
+}
+
 .text-banner a{
 	text-decoration: none;
 	color: #ffffff;
@@ -146,12 +171,10 @@ header .menu-movil{
 	margin-left: 2.8em;
 }
 
-.text-banner-movil p{
-	color: rgba(126, 126, 126, .7);
+.text-banner-alterno p{
 	width: 100%;
 	font-family: 'Roboto Mono', monospace;
-	font-size: 1em;
-	position: relative; top: 6em; right: -2em;
+	position: relative; top: 4em; right: -2em;
 	text-align: center;
 	display: none;
 }
@@ -259,6 +282,7 @@ header .menu-movil{
 	margin-top: 1em;
 	color: #435892;
 	font-size: 1.5em;
+	font-weight: bold;
 }
 
 .serv .btn-serv{
@@ -1010,42 +1034,66 @@ y colores en general, agregar más contenido*/
 	margin-right: 1em;
 }
 
-.article-cont{
+.article-contacto{
 	width: 75%;
 	/* background-color: red; */
 }
 
-.article-cont h2{
+.article-contacto h2{
 	text-align: center;
 }
 
-.form-container-contact{
+.form-container-contacto{
 	width: 50%;
 	margin: auto;
 	margin-bottom: 1em;
 	margin-top: 1em;
 }
 
-.formulario_contacto .input-group input[type="text"], input[type="email"], textarea{
+.formulario_contacto .input-group-cont .textarea{
 	color:#393f50;
 	border-bottom: 1px solid #393f50;
 }
 
-.formulario_contacto .input-group input[type="text"]:focus, input[type="email"]:focus, textarea:focus{
+.formulario_contacto .input-group-cont .input-email{
+	color:#393f50;
+	border-bottom: 1px solid #393f50;
+}
+
+.formulario_contacto .input-group-cont .input-name{
+	color: #393f50;
+	width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+
+.formulario_contacto .input-group-cont .textarea:focus{
 	color: #393f50;
 	border-bottom: 3px solid #393f50;
 }
 
-.label{
+.formulario_contacto .input-group-cont .input-email:focus{
+	color:#393f50;
+	border-bottom: 3px solid #393f50;
+}
+
+.formulario_contacto .input-group-cont .input-name:focus{
+	color: #393f50;
+	border: none;
+	border-bottom: 3px solid #393f50;
+}
+
+.label-contacto{
 	color: #393f50;
 }
 
-input[type="submit"]{
+.formulario_contacto .input-submit{
 	background-color: black;
 	color: #ffffff;
 }
 
-input[type="submit"]:hover{
+.formulario_contacto .input-submit:hover{
 	background-color: #393f50;
 }
 
@@ -1071,10 +1119,24 @@ input[type="submit"]:hover{
 
 .banner-oscuro-nos{
 	width: 100%;
-	height: 40em;
+	height: 43.77em;
 	background: rgba(0, 0, 0, .6);
-	z-index: 1;
+	z-index: 2;
 	display: none;
+	position: absolute;
+}
+
+.banner-movil-nos{
+	width: 100%;
+	height: 700px;
+	display: none;
+	background-image: url(../img/banner6.jpg);
+	background-size: cover;
+	z-index: 1;
+}
+
+.carrusel-nos{
+	display: flex;
 }
 
 .text-banner-nos{
@@ -1098,7 +1160,6 @@ input[type="submit"]:hover{
 	font-weight: bold;
 	color:  #4c637f;
 	padding-right: 50px;
-	text-align: justify;
 }
 
 .banner-nosotros a{
@@ -1153,7 +1214,7 @@ input[type="submit"]:hover{
 
 .img-nosotros{
 	width: 50%;
-	height: 100%;
+	height: 120%;
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -1185,6 +1246,7 @@ input[type="submit"]:hover{
 	align-items: flex-end;
 	width: 50%;
 	height: 100%;
+	margin: auto;
 }
 
 .pt-obj{
@@ -1192,7 +1254,7 @@ input[type="submit"]:hover{
 	border: 1px solid #bdaa8a;
 	text-align: center;
 	padding: 2em;
-	margin-right: 8em;
+	margin: auto;
 	margin-bottom: 3em;
 }
 
@@ -1226,6 +1288,8 @@ input[type="submit"]:hover{
 	padding-top: .3em;
 }
 
+/* Inicia media queries Nosotros */
+
 @media all and (max-width: 1630px){
 	.pt-obj p{
 		font-size: 1.1em;
@@ -1242,17 +1306,46 @@ input[type="submit"]:hover{
 	}
 }
 
+@media all and (max-width: 1130px){
+	.pt-obj{
+		margin-bottom: 1em;
+		padding: .7em;
+	}
+	
+}
+
 @media all and (max-width: 1055px){
+	
+	/* .carrusel-nos{
+		display: none;
+	} */
+
 	.banner-oscuro-nos{
 		display: flex;
 	}
 
+	.banner-movil-nos{
+		display: flex;
+	}
+
+	.carrusel-nos{
+		display: none;
+
+	}
+
 	.text-banner-nos h1{
 		color: white;
+		margin-right: 0;
+		font-size: 6em;
+		margin-left: 0;
+		position: relative; top: -70px; right: 1em;
+		width: 100%;
 	}
 
 	.text-banner-nos p{
 		color: white;
+		position: relative; top: -70px; right: 5em;
+		width: 80%;
 	}
 
 	.btn-contacto-nos{
@@ -1261,6 +1354,7 @@ input[type="submit"]:hover{
 	text-align: center;
 	margin-top: 2em;
 	border-radius: 2px;
+	position: relative; top: -70px; right: 6.3em;
 	}
 
 	.btn-contacto-nos a{
@@ -1276,6 +1370,7 @@ input[type="submit"]:hover{
 
 	.cont-der-nos{
 		z-index: 3;
+		position: relative; right: 10em;
 	}
 
 	.pt-obj{
@@ -1296,10 +1391,60 @@ input[type="submit"]:hover{
 
 }
 
+@media all and (max-width: 987px){
+	.p-fin{
+		height: 4em;
+	}
+}
 
-/*Agregar más contenido a la página, cambiar colores y modificar el 
-text
-*/
+@media all and (max-width: 865px){
+	.text-banner-nos h1{
+		font-size: 6em;
+		margin-top: 1em;
+	}
+}
+
+@media all and (max-width: 865px){
+	.text-banner-nos h1{
+		font-size: 5em;
+		position: relative; right: 1.5em;
+		/* margin-top: 1em; */
+	}
+
+	.text-banner-nos p{
+		font-size: 1.2em;
+		position: relative; right: 6em;
+	}
+
+	.btn-contacto-nos{
+		position: relative; right: 7em;
+	}
+
+	.text-banner-nos{
+		margin-left: 0;
+	}
+}
+
+@media all and (max-width: 535px){
+	.banner-nosotros{
+		position: relative; right: 2em;
+		margin-left: 10em;
+	}
+
+	.text-banner-nos h1{
+		font-size: 4em;
+	}
+
+	.text-banner-nos p{
+		font-size: 1em;
+	}
+	.btn-contacto-nos{
+		position: relative; right: 6em;
+	}
+}
+
+
+/* fin de media queries Nosotros */
 
 /*FIN DE ESTILOS DE PAGE NOSOTROS*/
 
@@ -1429,6 +1574,20 @@ text
     }
 }
 
+@media all and (max-width: 1023px){
+	.text-banner h1{
+		font-size: 4.5em;
+	}
+
+	.text-banner p{
+		display: none;
+	}
+	
+	.servicios .text-banner .text-movil-banner{
+		display: flex;
+	}
+}
+
 @media all and (max-width: 1000px){
 	.cont-caract{
 		width: 60%;
@@ -1519,6 +1678,42 @@ text
 		font-size: .9em;
 	}
 
+	.des-web-izq{
+		width: 100%;
+	}
+
+	.des-web-der{
+		display: none;
+	}
+
+	.marketing-digital{
+		height: 40em;
+	}
+
+	.mark-dig-der{
+		width: 100%;
+		background: url(../img/Ser-redcont.png);
+		background-size: cover;
+	}
+	.mark-dig-izq{
+		display: none;
+	}
+
+	.red-cont-izq{
+		width: 100%;
+	}
+	.red-cont-der{
+		display: none;
+	}
+
+	.formulario{
+		height: 29.23em;
+	}
+
+	.fondooscuro{
+		height: 29.23em;
+	}
+
 	.form-izq{
 		display: none;
 	}
@@ -1526,6 +1721,7 @@ text
 	.form-der{
 		margin: auto;
 		width: 70%;
+
 	}
 
 	.formulario{
@@ -1548,25 +1744,64 @@ text
 
 }
 
+@media all and (max-width: 839px){
+	.text-banner{
+		position: relative; right: -4em;
+	}
+}
+
 @media all and (max-width: 770px){
 	.servicios .cont-caract{
 		width: 80%;
 		height: 5em;
 		font-size: .8em;
+		position: relative; top: -33em;
 	}
+
+	.text-banner h1{
+		font-size: 4.3em;
+	}
+
+	.servicios .text-banner .text-movil-banner{
+		font-size: 1.3em;
+		padding-left: 7px;
+	
+	}
+
 }
 
 @media all and (max-width: 565px){
+	.carousel-control-prev{
+		display: none;
+	}
+	.carousel-control-next{
+		display: none;
+	}
+
+	.carousel{
+		display: none;
+	}
+	
+	.banner-movil{
+		display: flex;
+	}
+
+	.text-banner h1{
+		font-size: 3.5em;
+		color: #ffffff;
+		margin-bottom: 1em;
+	}
+
+	.servicios .text-banner .text-movil-banner{
+		display: none;
+	}
+
 	.banner > p{
 		display: none;
 	}
 
 	.cont-caract{
 		display: none;
-	}
-
-	.serv-2{
-		position: relative; top: 4.5em;
 	}
 
 	.serv-2 p{
@@ -1579,10 +1814,20 @@ text
 
 	.btn-contacto{
 		margin-top: 4-5em;
+		background: #ffffff;
+		margin-left: 2.1em;
 	}
 
-	.text-banner-movil p{
+	.btn-contacto a{
+		color: #393f50;
+	}
+
+	.text-banner .text-banner-alterno p{
 		display: flex;
+		color: #ccd3db;
+		font-size: 1.2em;
+		width: 110%;
+		margin: auto;
 	}
 
 	.logo{
@@ -1591,11 +1836,11 @@ text
 	}
 
 	.servicios{
-		height: 29em;
+		height: 23em;
 	}
 
 	.serv{
-		height: auto;
+		height: 40%;
 		width: 6em;
 	}
 
@@ -1609,5 +1854,6 @@ text
 
 	.cont-caract-movil{
 		display: flex;
+		margin-top: 4em;
 	}
 }
