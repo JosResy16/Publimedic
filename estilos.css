@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -67,7 +69,7 @@ header .menu-pc {
   font-size: 1.1em;
   border-bottom: 1px solid #bdaa8a;
   font-weight: bold;
-  color: #bdaa8a;
+  color: dorado;
 }
 
 .logo {
@@ -146,7 +148,7 @@ header .menu-movil {
   font-size: 1.5em;
   text-align: left;
   font-weight: bold;
-  color: #435892;
+  color: azul-claro;
   margin-left: 2.2em;
 }
 
@@ -155,7 +157,7 @@ header .menu-movil {
   font-size: 1.5em;
   text-align: left;
   font-weight: bold;
-  color: #435892;
+  color: azul-claro;
   margin-left: 1.6em;
   display: none;
 }
@@ -243,7 +245,7 @@ header .menu-movil {
   text-align: center;
   font-size: 2em;
   /*margin-top: .6em;*/
-  color: #435892;
+  color: azul-claro;
 }
 
 .cont-serv {
@@ -310,7 +312,7 @@ header .menu-movil {
 }
 
 .serv .btn-serv a:hover {
-  color: #435892;
+  color: azul-claro;
 }
 
 .serv .btn-serv p {
@@ -642,7 +644,7 @@ input[type=submit]:hover {
 .reseñas h3 {
   text-align: center;
   font-size: 1.3em;
-  color: #bdaa8a;
+  color: dorado;
 }
 
 .reseñas h2 {
@@ -691,7 +693,7 @@ input[type=submit]:hover {
 }
 
 .bts-next i:hover {
-  color: #bdaa8a;
+  color: dorado;
 }
 
 .comentarios-clientes i {
@@ -853,7 +855,7 @@ footer p {
 }
 
 .banner-servicios a:hover {
-  color: #bdaa8a;
+  color: dorado;
 }
 
 .nuestros-servicios {
@@ -1106,7 +1108,7 @@ y colores en general, agregar más contenido*/
   display: flex;
   margin-left: 2em;
   font-size: 1.2em;
-  color: #393f50;
+  color: azul-oscuro;
 }
 
 .point-aside i {
@@ -1130,40 +1132,40 @@ y colores en general, agregar más contenido*/
 }
 
 .formulario_contacto .input-group-cont .textarea {
-  color: #393f50;
-  border-bottom: 1px solid #393f50;
+  color: azul-oscuro;
+  border-bottom: 1px solid azul-oscuro;
 }
 
 .formulario_contacto .input-group-cont .input-email {
-  color: #393f50;
-  border-bottom: 1px solid #393f50;
+  color: azul-oscuro;
+  border-bottom: 1px solid azul-oscuro;
 }
 
 .formulario_contacto .input-group-cont .input-name {
-  color: #393f50;
+  color: azul-oscuro;
   width: 100%;
   border: none;
   border-bottom: 1px solid black;
 }
 
 .formulario_contacto .input-group-cont .textarea:focus {
-  color: #393f50;
-  border-bottom: 3px solid #393f50;
+  color: azul-oscuro;
+  border-bottom: 3px solid azul-oscuro;
 }
 
 .formulario_contacto .input-group-cont .input-email:focus {
-  color: #393f50;
-  border-bottom: 3px solid #393f50;
+  color: azul-oscuro;
+  border-bottom: 3px solid azul-oscuro;
 }
 
 .formulario_contacto .input-group-cont .input-name:focus {
-  color: #393f50;
+  color: azul-oscuro;
   border: none;
-  border-bottom: 3px solid #393f50;
+  border-bottom: 3px solid azul-oscuro;
 }
 
 .label-contacto {
-  color: #393f50;
+  color: azul-oscuro;
 }
 
 .formulario_contacto .input-submit {
@@ -1172,7 +1174,7 @@ y colores en general, agregar más contenido*/
 }
 
 .formulario_contacto .input-submit:hover {
-  background-color: #393f50;
+  background-color: azul-oscuro;
 }
 
 /*Cambiar colores de background, agregar más contenido*/
@@ -1325,7 +1327,7 @@ y colores en general, agregar más contenido*/
 
 .pt-obj {
   width: 60%;
-  border: 1px solid #bdaa8a;
+  border: 1px solid dorado;
   text-align: center;
   padding: 2em;
   margin: auto;
@@ -1800,7 +1802,7 @@ y colores en general, agregar más contenido*/
     margin-left: 2.1em;
   }
   .btn-contacto a {
-    color: #393f50;
+    color: azul-oscuro;
   }
   .text-banner .text-banner-alterno p {
     display: flex;
