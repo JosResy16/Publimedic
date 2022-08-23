@@ -199,7 +199,18 @@ header .menu-movil{
 	z-index: 3;
 }
 
-.cont-caract .caract{
+// .cont-caract .caract{
+// 	width: 33.3%;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	font-size: 2em;
+// 	font-weight: bold;
+// 	text-align: center;
+// 	color: white;
+// }
+
+.cont-caract .car1{
 	width: 33.3%;
 	display: flex;
 	justify-content: center;
@@ -208,17 +219,16 @@ header .menu-movil{
 	font-weight: bold;
 	text-align: center;
 	color: white;
-}
-
-.cont-caract .car1{
 	background-color: $azul-oscuro;
 }
 
 .cont-caract .car2{
+	@extend .car1;
 	background-color: $azul-claro;
 }
 
 .cont-caract .car3{
+	@extend .car1;
 	background-color: $dorado;
 }
 
@@ -257,29 +267,38 @@ header .menu-movil{
 	/* align-items: center; */
 }
 
-.serv{
-	height: 80%;
-	width: 20%;
-	display: flex;
-	flex-direction: column;
-	font-size: 1.4em;
-	align-items: center;
-	/*justify-content: center;*/
-	border:  1px solid black;
-	text-align: center;
-	border: none;
+@mixin size ($width, $height, $font-size, $color) {
+	width: $width;
+	height: $height;
+	font-size: $font-size;
+	background-color: $color;
 }
 
 .serv1{
-	background-color: #ccd3db;
+	@include size(20%, 80%, 1.4em, #ccd3db);
+	align-items: center;
+	text-align:center;
+	border: none;
+	display: flex;
+	flex-direction: column;
 }
 
 .serv2{
-	background-color: #ccd3db ;
+	@include size(20%, 80%, 1.4em, #ccd3db);
+	align-items: center;
+	text-align: center;
+	border: none;
+	display: flex;
+	flex-direction: column;
 }
 
 .serv3{
-	background-color: #ccd3db ;
+	@include size(20%, 80%, 1.4em, #ccd3db);
+	align-items: center;
+	text-align: center;
+	border: none;
+	display: flex;
+	flex-direction: column;
 }
 
 .serv i{
@@ -426,8 +445,7 @@ header .menu-movil{
 }
 
 .mark-dig-der{
-	width: 50%;
-	height: 100%;
+	@extend .des-web-izq;
 }
 
 .mark-dig-der h2{
@@ -472,8 +490,7 @@ header .menu-movil{
 }
 
 .red-cont-izq{
-	width: 50%;
-	height: 100%;
+	@extend .des-web-izq;
 }
 
 .red-cont-izq h2{
@@ -899,28 +916,21 @@ footer p{
 .img-serv{
 	width: 50%;
 	height: 250px;
-	/*background-color: red;*/
 }
 
-.img-serv1{
-	background-image: url(../img/des-web-serv.jpg);
-	background-size: cover;
-}
+$servicios: (
+	serv1: des-web-serv,
+	serv2: mark-dig-serv,
+	serv3: writing,
+	serv4: banner1
+);
 
-.img-serv2{
-	background-image: url(../img/mark-dig-serv.jpg);
-	background-size: cover;
-}
-
-.img-serv3{
-	background-image: url(../img/writing.jpg);
-	background-size: cover;
-}
-
-.img-serv4{
-	background-image: url(../img/banner1.jpg);
-	background-size: contain;
-}
+@each $servs, $imagen in $servicios {
+	.img-#{$servs} {
+		background-image: url(img/$imagen.jpg);
+		background-size: cover;
+	}
+};
 
 .text-serv{
 	width: 50%;
