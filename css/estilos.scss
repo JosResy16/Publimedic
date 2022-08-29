@@ -41,6 +41,8 @@ header{
 	width: 100%;
 	height: 5em;
 	background-color: $azul-oscuro;
+	position: fixed; top: 0;
+	z-index: 99;
 }
 
 header .menu-pc{
@@ -53,6 +55,7 @@ header .menu-pc{
 .menu-pc nav{
 	margin: auto;
 	width: 50%;
+	margin-top: 2em;
 }
 
 .menu-pc nav ul{
@@ -62,11 +65,12 @@ header .menu-pc{
 .menu-pc nav ul li{
 	list-style: none;
 	width: 20%;
-
 }
 
 .menu-pc nav ul li a{
 	text-decoration: none;
+	font-family: $font1;
+	letter-spacing: 1px;
 	color: white;
 	transition: ease .3s ;
 }
@@ -117,6 +121,10 @@ header .menu-movil{
 	position: relative; top: -35em; right: -10em;
 }
 
+.carousel{
+	padding-top: 5em;
+}
+
 .carousel-item img{
 	width: 100%;
 	height: 700px;
@@ -151,7 +159,7 @@ header .menu-movil{
 	margin-bottom: .8em;
 	font-size: 1.5em;
 	text-align: left;
-	font-weight: bold;
+	font-weight: normal;
 	color: azul-claro;
 	margin-left: 2.2em;
 }
@@ -199,17 +207,6 @@ header .menu-movil{
 	z-index: 3;
 }
 
-// .cont-caract .caract{
-// 	width: 33.3%;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	font-size: 2em;
-// 	font-weight: bold;
-// 	text-align: center;
-// 	color: white;
-// }
-
 .cont-caract .car1{
 	width: 33.3%;
 	display: flex;
@@ -248,7 +245,7 @@ header .menu-movil{
 .servicios  p{
 	text-align: center;
 	font-size: 3em;
-	margin-bottom: 1.5em;
+	// margin-bottom: 1.5em;
 }
 
 .servicios h2{
@@ -265,6 +262,10 @@ header .menu-movil{
 	flex-direction: row;
 	justify-content: space-around;
 	/* align-items: center; */
+}
+
+.serv{
+	border-radius: 40px;
 }
 
 @mixin size ($width, $height, $font-size, $color) {
@@ -315,14 +316,17 @@ header .menu-movil{
 }
 
 .serv .btn-serv{
-	margin-top: 2.18em;
-	margin-right: .5em;
+	margin-top: 4em;
 	font-size: .8em;
 	color: #ffffff;
 	cursor: pointer;
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	align-items: baseline;
+	background-color: grey;
+    border-radius: 40px;
+    width: 190px;
 }
 
 .serv .btn-serv a{
@@ -331,11 +335,11 @@ header .menu-movil{
 }
 
 .serv .btn-serv a:hover{
-	color: azul-claro;
+	color: $azul-claro;
 }
 
 .serv .btn-serv p{
-	font-size: 2em;
+	font-size: 1.3em;
 }
 
 .serv .btn-serv i{
@@ -578,6 +582,7 @@ header .menu-movil{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	letter-spacing: 1px;
 	position: relative; right: -6em;
 	background-color: white;
 	z-index: 2;
@@ -823,13 +828,14 @@ footer p{
 	text-align: right;
 	background-color: #70c0fb;
 	z-index: 1;
+	margin-top: 5em;
 }
 
 .oscuro-servicios{
 	width: 100%;
 	height: 500px;
 	position: absolute;
-	background: rgba(0, 0, 0, .3);
+	background: rgba(0, 0, 0, .4);
 	z-index: 2;
 }
 
@@ -849,7 +855,7 @@ footer p{
 .banner-servicios p{
 	margin-bottom: 20px;
 	font-size: 1.4em;
-	font-weight: bold;
+	font-weight: normal;
 	color: #ffffff;
 	padding-right: 50px;
 }
@@ -918,19 +924,26 @@ footer p{
 	height: 250px;
 }
 
-$servicios: (
-	serv1: des-web-serv,
-	serv2: mark-dig-serv,
-	serv3: writing,
-	serv4: banner1
-);
+.img-serv1{
+	background-image: url(../img/des-web-serv.jpg);
+	background-size: cover;
+}
 
-@each $servs, $imagen in $servicios {
-	.img-#{$servs} {
-		background-image: url(img/$imagen.jpg);
-		background-size: cover;
-	}
-};
+.img-serv2{
+	background-image: url(../img/mark-dig-serv.jpg);
+	background-size: cover;
+}
+
+.img-serv3{
+	background-image: url(../img/writing.jpg);
+	background-size: cover;
+}
+
+.img-serv4{
+	background-image: url(../img/banner1.jpg);
+	background-size: cover;
+}
+
 
 .text-serv{
 	width: 50%;
@@ -942,22 +955,36 @@ $servicios: (
 	margin-top: 1em;
 	margin-bottom: 1.3em;
 	border-bottom: 1px solid gray;
+	font-size: 1.3em;
+}
+
+.text-serv p{
+	font-size: 1.1em;
 }
 
 @media all and (max-width: 1555px){
 	.oscuro-servicios{
-		background: rgba(0, 0, 0, .8);
+		background: rgba(0, 0, 0, .9);
 	}
 
 	.text-banner-serv{
 		margin-left: 0;
-		position: relative; right: 10em;
+		position: relative; right: em;
+		width: 60%;
+	}
+
+	.banner-servicios h1{
+		font-size: 4em;
+	}
+	.banner-servicios p{
+		font-weight: normal;
 	}
 }
 
 @media all and (max-width: 1282px){
 	.text-banner-serv{
-		position: relative; right: 4em;
+		position: relative;
+		margin-left: -20em;
 	}
 }
 
@@ -979,14 +1006,14 @@ $servicios: (
 
 	.btn-contacto-serv{
 		font-size: 1.2em;
-		position: relative; right: 5em;
+		position: relative; right: 0
 	}
 }
 
 @media all and (max-width: 941px){
 
 	.text-banner-serv{
-		margin-left: 2em;
+		margin-left: -15em;
 	}
 
 	.text-banner-serv h1{
@@ -1002,13 +1029,32 @@ $servicios: (
 	}
 
 	.btn-contacto-serv{
-		width: 140px;
+		width: 170px;
 		height: 36px;
-		margin-left: 5em;
+		margin-left: 0;
+	}
+}
+
+@media all and (max-width: 850px) {
+	.text-banner-serv h1{
+		font-size: 3em;
+	}
+	.text-banner-serv p{
+		font-size: 1.1em;
+	}
+	.btn-contacto-serv {
+		font-size: 1em;
+		width: 130px;
+		height: 30px;
+		margin-left: 0;
 	}
 }
 
 @media all and (max-width: 735px){
+	.text-banner-serv {
+		margin-left: 3em;
+		width: 100%;
+	}
 	.text-banner-serv p{
 		width: 70%;
 		font-size: 1em;
@@ -1058,6 +1104,7 @@ y colores en general, agregar más contenido*/
 	background-repeat: no-repeat;
 	text-align: right;
 	background-color: #70c0fb;
+	margin-top: 5em;
 }
 
 .text-banner-cont{
@@ -1079,7 +1126,6 @@ y colores en general, agregar más contenido*/
 .banner-contacto p{
 	margin-bottom: 20px;
 	font-size: 1.4em;
-	font-weight: bold;
 	color: #3e4e59;
 	padding-right: 50px;
 	text-align: justify;
@@ -1165,41 +1211,44 @@ y colores en general, agregar más contenido*/
 }
 
 .formulario_contacto .input-group-cont .textarea{
-	color:azul-oscuro;
-	border-bottom: 1px solid azul-oscuro;
+	color: $azul-oscuro;
+	border-bottom: 1px solid $azul-oscuro;
+	padding-left: 5px;
 }
 
 .formulario_contacto .input-group-cont .input-email{
-	color:azul-oscuro;
-	border-bottom: 1px solid azul-oscuro;
+	color: $azul-oscuro;
+	border-bottom: 1px solid $azul-oscuro;
+	padding-left: 5px;
 }
 
 .formulario_contacto .input-group-cont .input-name{
-	color: azul-oscuro;
+	color: $azul-oscuro;
 	width: 100%;
     border: none;
     border-bottom: 1px solid black;
+	padding-left: 5px;
 }
 
 
 .formulario_contacto .input-group-cont .textarea:focus{
-	color: azul-oscuro;
-	border-bottom: 3px solid azul-oscuro;
+	color: $azul-oscuro;
+	border-bottom: 3px solid $azul-oscuro;
 }
 
 .formulario_contacto .input-group-cont .input-email:focus{
-	color:azul-oscuro;
-	border-bottom: 3px solid azul-oscuro;
+	color: $azul-oscuro;
+	border-bottom: 3px solid $azul-oscuro;
 }
 
 .formulario_contacto .input-group-cont .input-name:focus{
-	color: azul-oscuro;
+	color: $azul-oscuro;
 	border: none;
-	border-bottom: 3px solid azul-oscuro;
+	border-bottom: 3px solid $azul-oscuro;
 }
 
 .label-contacto{
-	color: azul-oscuro;
+	color: $azul-oscuro;
 }
 
 .formulario_contacto .input-submit{
@@ -1208,29 +1257,136 @@ y colores en general, agregar más contenido*/
 }
 
 .formulario_contacto .input-submit:hover{
-	background-color: azul-oscuro;
+	background-color: $azul-oscuro;
 }
 
-/*Cambiar colores de background, agregar más contenido*/
+// Media queries contacto
+
+@media all and (max-width:1433px) {
+	.banner-contacto h1{
+		font-size: 4.5em;
+	}
+	.banner-contacto p{
+		font-size: 1.2em;
+	}
+}
+
+@media all and (max-width:1259px) {
+	.container-contenido-cont{
+		flex-direction: column;
+	}
+
+	.aside-cont {
+		width: 100%;
+	}
+
+	.container-aside{
+		flex-direction: row;
+		margin-left: 0;
+		margin-top: 3em;
+		font-size: 1em;
+	}
+
+	.article-contacto {
+		width: 100%;
+		margin-top: 3em;
+	}
+}
+
+@media all and (max-width:825px) {
+	.banner-contacto .text-banner-cont {
+		margin-left: 5em; 
+	}
+	.banner-contacto h1 {
+		font-size: 4em;
+	}
+
+	.banner-contacto p {
+		font-size: 1em;
+	}
+
+	.aside-cont {
+		width: 50%;
+	}
+
+	.container-aside{
+		flex-direction: column;
+		margin-top: 1em;
+		font-size: 1em;
+	}
+
+	.article-contacto {
+		width: 100%;
+		margin-top: 3em;
+	}
+}
+
+@media all and (max-width:755px) {
+	.form-container-contacto {
+		width: 70%;
+	}
+	.titulo-contacto {
+		font-size: .7em;
+	}
+	
+	.aside-cont h2{
+		font-size: 1.7em;
+	}
+	.container-aside{
+		font-size: .9em;
+		margin-left: 5em;
+	}
+}
+
+@media all and (max-width:555px) {
+	.banner-contacto .text-banner-cont {
+		margin-left: 0; 
+	}
+	
+	.banner-contacto h1 {
+		font-size: 3.5em;
+	}
+
+	.banner-contacto p {
+		margin-bottom: 20px;
+		font-weight: normal;
+		padding-right: 0; 
+		
+	}
+
+	.btn-contacto-cont{
+		display: none;
+	}
+
+	input[type=submit]{
+		width: auto;
+	}
+}
+
+@media all and (max-width:425px) {
+	.text-banner-cont h1{
+		font-size: 3em;
+	}
+
+	.menu-movil .menu-hamburguesa i {
+		margin-right: 1em;
+	}
+
+	.logo {
+		margin-left: 1em;
+		right: 0;
+	}
+}
+
+
+// Fin de media queries contacto
+
+
 
 
 /*FIN DE ESTILOS DE PAGE CONTACTO*/
 
 /*ESTILOS DE PAGE NOSOTRO*/
-
-.banner-nosotros{
-	width: 70%;
-	/* height: 40em; */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	/*padding-left: 20px;*/
-	/* background-image: url(../img/banner5.jpg); */
-	z-index: 3;
-	position: relative; top: -20em; right: -10em;
-}
-
 .banner-oscuro-nos{
 	width: 100%;
 	height: 43.77em;
@@ -1254,29 +1410,33 @@ y colores en general, agregar más contenido*/
 }
 
 .text-banner-nos{
-	width: 100%;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 	text-align:left;
-	margin-left: 2em;
 	z-index: 3;
-	position: absolute;
+	position: absolute; top: 12em;
+	margin-left: 10em;
 }
 
-.banner-nosotros h1{
+.text-banner-nos h1{
 	margin-bottom: 25px;
 	padding-right: 50px;
 	font-size: 7em;
 }
 
-.banner-nosotros p{
+.text-banner-nos p{
 	margin-bottom: 20px;
-	width: 50%;
+	width: 100%;
 	font-size: 1.5em;
-	font-weight: bold;
+	font-weight: normal;
 	color:  #4c637f;
 	padding-right: 50px;
 }
 
-.banner-nosotros a{
+.text-banner-nos a{
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 1.4em;
@@ -1328,7 +1488,7 @@ y colores en general, agregar más contenido*/
 
 .img-nosotros{
 	width: 50%;
-	height: 120%;
+	height: 100%;
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -1365,7 +1525,7 @@ y colores en general, agregar más contenido*/
 
 .pt-obj{
 	width: 60%;
-	border: 1px solid dorado;
+	border: 1px solid $dorado;
 	text-align: center;
 	padding: 2em;
 	margin: auto;
@@ -1411,16 +1571,19 @@ y colores en general, agregar más contenido*/
 }
 
 @media all and (max-width: 1525px){
-	.banner-nosotros h1{
-	font-size: 5em;
-	}
-
-	.banner-nosotros p{
+	.text-banner-nos p{
 		font-size: 1.3em;
 	}
 }
 
 @media all and (max-width: 1130px){
+	.text-banner-nos{
+		margin-left: 6em;
+	}
+
+	.text-banner-nos h1{
+		font-size: 6.5em;
+	}
 	.pt-obj{
 		margin-bottom: 1em;
 		padding: .7em;
@@ -1447,6 +1610,11 @@ y colores en general, agregar más contenido*/
 
 	}
 
+	.text-banner-nos{
+		margin-left: 10em;
+		top: 18em;
+	}
+
 	.text-banner-nos h1{
 		color: white;
 		margin-right: 0;
@@ -1459,7 +1627,7 @@ y colores en general, agregar más contenido*/
 	.text-banner-nos p{
 		color: white;
 		position: relative; top: -70px; right: 5em;
-		width: 80%;
+		width: 100%;
 	}
 
 	.btn-contacto-nos{
@@ -1476,8 +1644,8 @@ y colores en general, agregar más contenido*/
 	}
 
 	.img-nosotros{
-		height: 130%;
-		margin-top: 4em;
+		height: 100%;
+		margin-top: 10em;
 		z-index: 1;
 		position: static;
 	}
@@ -1505,6 +1673,12 @@ y colores en general, agregar más contenido*/
 
 }
 
+@media all and (max-width: 1000px) {
+	.text-banner-nos h1{
+		font-size: 5em;
+	}
+}
+
 @media all and (max-width: 987px){
 	.p-fin{
 		height: 4em;
@@ -1512,17 +1686,17 @@ y colores en general, agregar más contenido*/
 }
 
 @media all and (max-width: 865px){
-	.text-banner-nos h1{
-		font-size: 6em;
-		margin-top: 1em;
+	.text-banner-nos {
+		right: 10em;
+		margin-left: 0;
+		top: 5em;
 	}
-}
-
-@media all and (max-width: 865px){
+	
 	.text-banner-nos h1{
 		font-size: 5em;
-		position: relative; right: 1.5em;
-		/* margin-top: 1em; */
+		position: relative; right: 1.3em;
+		font-size: 6em;
+		margin-top: 1em;
 	}
 
 	.text-banner-nos p{
@@ -1533,16 +1707,41 @@ y colores en general, agregar más contenido*/
 	.btn-contacto-nos{
 		position: relative; right: 7em;
 	}
+}
 
-	.text-banner-nos{
-		margin-left: 0;
+@media all and (max-width: 750px){
+	.text-banner-nos {
+		right: 7em;
+		top: 7em;
+	}	
+	.text-banner-nos h1{
+		font-size: 5em;
+	}
+}
+
+@media (max-width: 670px) {
+	.text-banner-nos {
+		right: 6em;
+		top: 8em;
+	}
+	.text-banner-nos p{
+		width: 100%;
+	}
+
+	.container-nosotros h2 {
+		margin-bottom: 0.5em;
+	}
+
+	.container-nosotros .text-nos p {
+		font-weight: normal;
 	}
 }
 
 @media all and (max-width: 535px){
-	.banner-nosotros{
-		position: relative; right: 2em;
-		margin-left: 10em;
+	.text-banner-nos {
+		position: absolute;
+		margin-top: 3em;
+		padding-left: 3em;
 	}
 
 	.text-banner-nos h1{
@@ -1564,9 +1763,12 @@ y colores en general, agregar más contenido*/
 
 /*COMIENZA ESTILOS DE GALERIA*/
 
-.trab-ant{
+.contenedor-galeria{
+	padding-top: 10em;
+}
+
+.contenedor-galeria .trab-ant{
 	text-align: center;
-	margin-top: 1.5em;
 }
 
 .container-galeria{
@@ -1584,8 +1786,10 @@ y colores en general, agregar más contenido*/
 .imagen-galeria{
 	height: 300px;
 	width: 100%;
-	background-image: url(../img/writing.jpg);
-	background-size: cover;
+	background-image: url(../img/loading.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 	cursor: pointer;
 	z-index: 1;
 }
@@ -1601,6 +1805,7 @@ y colores en general, agregar más contenido*/
 
 .fondo-oscuro-galeria:hover{
 	background: transparent;
+	border: 1px solid grey;
 }
 
 @media all and (max-width: 1135px){
@@ -1671,20 +1876,25 @@ y colores en general, agregar más contenido*/
 	header .menu-pc{
 		display: none;
 	}
+
 	header .menu-movil{
 		display: flex;
 	}
 
-	 .formulario{
-    	justify-content: space-between;
+	.text-banner{
+		right: -4em;
+	}
+
+	.formulario{
+		justify-content: space-between;
     }
 
     .form-izq{
-    	position: relative; right: -3.5em;
+		position: relative; right: -3.5em;
     }
 
     .form-der{
-    	margin-right: 3.5em;
+		margin-right: 3.5em;
     }
 }
 
@@ -1709,51 +1919,51 @@ y colores en general, agregar más contenido*/
     }
 
     .serv-2 h2{
-    	font-size: 1.3em;
+		font-size: 1.3em;
     }
 
     .serv-2 p{
-    	font-size: 2em;
+		font-size: 2em;
     }
 
     .servicios{
-    	height: 35em;
+		height: 35em;
     }
 
     .cont-serv{
-       	height: 27em;
+		height: 27em;
     }
 
     .cont-serv .serv h3{
-    	font-size: 1em;
+		font-size: 1em;
     }
 
     .cont-serv .serv p{
-    	font-size: 1.2em;
+		font-size: 1.2em;
     }
 
     .serv .btn-serv{
-    	margin-top: 1em;
-    	font-size: .7em;
+		margin-top: 1em;
+		font-size: .7em;
     }
 
     .des-web-izq > p{
-    	display: none;
+		display: none;
     }
 
     .mark-dig-der > p{
-    	display: none;
+		display: none;
     }
 
     .red-cont-izq > p{
-    	display: none;
+		display: none;
     }
 
     .form-res{
-    	height: auto;
+		height: auto;
     }
     .reseñas{
-    	height: 28em ;
+		height: 28em ;
     }
 }
 
@@ -1900,6 +2110,10 @@ y colores en general, agregar más contenido*/
 		display: flex;
 	}
 
+	.menu-movil .menu-hamburguesa i{
+		margin-right: 1em;
+	}
+
 	.text-banner h1{
 		font-size: 3.5em;
 		color: #ffffff;
@@ -1933,7 +2147,11 @@ y colores en general, agregar más contenido*/
 	}
 
 	.btn-contacto a{
-		color: azul-oscuro;
+		color: $azul-oscuro;
+	}
+
+	.text-banner{
+		right: .2em;
 	}
 
 	.text-banner .text-banner-alterno p{
@@ -1969,5 +2187,11 @@ y colores en general, agregar más contenido*/
 	.cont-caract-movil{
 		display: flex;
 		margin-top: 4em;
+	}
+}
+
+@media all and (max-width:440px) {
+	.text-banner h1 {
+		font-size: 3em;
 	}
 }
