@@ -75,7 +75,7 @@ header .menu-pc {
   font-size: 1.1em;
   border-bottom: 1px solid #bdaa8a;
   font-weight: bold;
-  color: dorado;
+  color: #bdaa8a;
 }
 
 .logo {
@@ -111,7 +111,6 @@ header .menu-movil {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* padding-left: 1.25em; */
   z-index: 3;
   position: relative;
   top: -35em;
@@ -250,7 +249,6 @@ header .menu-movil {
 .servicios h2 {
   text-align: center;
   font-size: 2em;
-  /*margin-top: .6em;*/
   color: azul-claro;
 }
 
@@ -260,7 +258,6 @@ header .menu-movil {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* align-items: center; */
 }
 
 .serv {
@@ -360,7 +357,6 @@ header .menu-movil {
   padding-top: 2em;
   padding-bottom: 4em;
   display: flex;
-  /*margin-bottom: 4em;*/
   z-index: 2;
   position: relative;
 }
@@ -398,7 +394,6 @@ header .menu-movil {
   height: 65%;
   margin: auto;
   margin-top: 1.25em;
-  /*background-color: coral;*/
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -435,7 +430,6 @@ header .menu-movil {
   height: 40em;
   display: flex;
   padding-bottom: 4em;
-  /*margin-bottom: 4em;*/
 }
 
 .mark-dig-izq {
@@ -794,13 +788,6 @@ footer p {
   font-size: 0.9em;
 }
 
-/*
-3. Termianr de agregar texto a las disitntas paginas
-4. Agregar más contenido a las paginas
-5. Anexar más imagenes a los banner 
-6. colocar enlaces de imagenes y redes 
-7. ...
-*/
 /*ESTILOS DE PAGE SERVICIOS*/
 .banner-servicios {
   width: 100%;
@@ -861,7 +848,6 @@ footer p {
   height: 36px;
   text-align: center;
   border-radius: 2px;
-  /* position: relative; right: 13em; */
   z-index: 3;
   transition: ease all 0.5s;
 }
@@ -1055,8 +1041,6 @@ footer p {
     display: none;
   }
 }
-/*Agregar estilos de hover a los elementos, cambiar colores de background
-y colores en general, agregar más contenido*/
 /*FIN DE ESTILOS DE PAGE SERVICIOS*/
 /*ESTILOS DE PAGE CONTACTO*/
 .banner-contacto {
@@ -1135,7 +1119,6 @@ y colores en general, agregar más contenido*/
 
 .aside-cont {
   width: 25%;
-  /* background-color: coral; */
   text-align: center;
 }
 
@@ -1162,7 +1145,6 @@ y colores en general, agregar más contenido*/
 
 .article-contacto {
   width: 75%;
-  /* background-color: red; */
 }
 
 .article-contacto h2 {
@@ -1521,9 +1503,6 @@ y colores en general, agregar más contenido*/
   }
 }
 @media all and (max-width: 1055px) {
-  /* .carrusel-nos{
-  	display: none;
-  } */
   .banner-oscuro-nos {
     display: flex;
   }
@@ -1724,9 +1703,6 @@ y colores en general, agregar más contenido*/
     width: 80%;
   }
 }
-/*CAMBIAR IMAGNES Y AGREGAR ESTILOS DE HOVER A CADA IMAGEN
-	CAMBIAR FONDO Y COLORES, AGREGAR NOMBRE A CADA IMAGEN.
-*/
 /*FIN DE ESTILOS DE GALERIA*/
 /*---------------MEDIA QUERIES-----------*/
 @media all and (max-width: 1290px) {
@@ -1846,7 +1822,6 @@ y colores en general, agregar más contenido*/
   }
   .banner p {
     width: 70%;
-    /*text-align: justify;*/
   }
   .cont-caract {
     width: 75%;
