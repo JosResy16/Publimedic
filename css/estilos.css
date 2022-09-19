@@ -92,7 +92,7 @@ header .menu-pc {
 header .menu-movil {
   width: 100%;
   height: 100%;
-  display: none;
+  display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
@@ -210,21 +210,36 @@ header .menu-movil {
 .cont-caract .car1, .cont-caract .car3, .cont-caract .car2 {
   width: 33.3%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 2em;
   font-weight: bold;
   text-align: center;
   color: white;
   background-color: #393f50;
 }
 
+.cont-caract .car1 p, .cont-caract .car3 p, .cont-caract .car2 p {
+  font-size: 2em;
+  margin: 0;
+}
+
 .cont-caract .car2 {
   background-color: #435892;
 }
 
+.cont-caract .car2 p {
+  font-size: 2em;
+  margin: 0;
+}
+
 .cont-caract .car3 {
   background-color: #bdaa8a;
+}
+
+.cont-caract .car3 p {
+  font-size: 2em;
+  margin: 0;
 }
 
 .servicios {
@@ -653,7 +668,7 @@ input[type=submit]:hover {
 .reseñas h3 {
   text-align: center;
   font-size: 1.3em;
-  color: dorado;
+  color: #bdaa8a;
 }
 
 .reseñas h2 {
@@ -676,6 +691,10 @@ input[type=submit]:hover {
   margin: auto;
   margin-top: 0.625em;
   border-radius: 6.25em;
+}
+
+.img-container img {
+  width: 8.5em;
 }
 
 .container-text-res {
@@ -724,12 +743,17 @@ input[type=submit]:hover {
 .cont-caract-movil .caract {
   width: 33.3%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 0.8em;
   font-weight: bold;
   text-align: center;
   color: white;
+}
+
+.cont-caract-movil .caract p {
+  margin: 0;
 }
 
 .cont-caract-movil .car1, .cont-caract-movil .cont-caract .car2, .cont-caract .cont-caract-movil .car2, .cont-caract-movil .cont-caract .car3, .cont-caract .cont-caract-movil .car3 {
@@ -1716,7 +1740,7 @@ footer p {
     height: 6em;
     width: 60%;
   }
-  .servicios .cont-caract .caract {
+  .servicios .cont-caract .caract p {
     font-size: 1.5em;
   }
   .serv-2 h2 {
@@ -1975,7 +1999,7 @@ footer p {
   }
   .serv {
     height: 40%;
-    width: 6em;
+    width: 5em;
   }
   .cont-serv .serv h3 {
     font-size: 0.8em;
@@ -1985,7 +2009,7 @@ footer p {
   }
   .cont-caract-movil {
     display: flex;
-    margin-top: 4em;
+    margin-top: 9em;
   }
 }
 @media all and (max-width: 440px) {

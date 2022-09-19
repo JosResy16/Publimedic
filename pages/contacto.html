@@ -15,19 +15,6 @@
 </head>
 <body>
 	<header>
-		<div class="menu-pc">
-			<a href="../index.html"><img src="../img/logo.png" class="logo" alt="logo"></a>
-			<nav>
-				<ul>
-					<li><a href="../index.html">Inicio</a></li>
-					<li><a href="nosotros.html">Nosotros</a></li>
-					<li><a href="galeria.html">Galería</a></li>
-					<li><a href="servicios.html">Servicios</a></li>
-					<li><a href="contacto.html">Contácto</a></li>
-				</ul>
-			</nav>
-		</div>	
-		<!-- menú movil -->
 		<div class="menu-movil dropdown">
 			<a href="index.html"><img class="logo" src="../img/logo.png" alt="logo"></a>
 			<button type="button" class="menu-hamburguesa btn" data-toggle="dropdown">
@@ -35,6 +22,7 @@
 			</button>
 			<div class="dropdown-menu">
 				<a class="dropdown-item" href="../index.html">Inicio</a>
+				<a class="dropdown-item" href="contacto.html">Contacto</a>
 				<a class="dropdown-item" href="galeria.html">Galería</a>
 				<a class="dropdown-item" href="servicios.html">Servicios</a>
 				<a class="dropdown-item" href="nosotros.html">Nosotros</a>
@@ -46,12 +34,14 @@
 			<div class="text-banner-cont">
 				<h1>Estamos comprometidos con tu proyecto</h1>
 				<p>Desarrollamos páginas web que te ayudarán a entrar al mundo digital dando una experiencia única a tu audiencia, incrementa tus ventas ahora mismo</p>
-				<div class="btn-contacto-cont"><a href="#">Contáctanos</a></div>
+				<div class="btn-contacto-cont">
+					<a href="#contactanos">Contáctanos</a>
+				</div>
 			</div>	
 		</section>
 		<section class="container-contacto">
 			<div class="titulo-contacto">
-				<h1>¿Cómo podemos ayudarte?</h1>
+				<h1 id="contactanos">¿Cómo podemos ayudarte?</h1>
 			</div>
 			<div class="container-contenido-cont">
 				<aside class="aside-cont">
@@ -71,7 +61,7 @@
 						</div>
 					</div>
 				</aside>
-				<article class="article-contacto">
+				<div class="article-contacto">
 					<h2>Déjanos tu mensaje y en breve nos contaremos contigo</h2>
 					<div class="form-container-contacto">
 						<form action="" class="formulario_contacto" name="formulario_contacto">
@@ -92,7 +82,7 @@
 							</div>
 						</form>
 					</div>
-				</article>
+				</div>
 			</div>
 		</section>
 	</main>
